@@ -1,0 +1,26 @@
+{
+  "name": "alphaflow-coinbase-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "supabase:serve": "supabase functions serve coinbase-proxy --env-file .env.local",
+    "supabase:deploy": "supabase functions deploy coinbase-proxy",
+    "supabase:secrets": "supabase secrets set --env-file .env.local",
+    "db:push": "supabase db push"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
+  }
+}
